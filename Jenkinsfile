@@ -70,7 +70,7 @@ pipeline {
                 dockerImage = docker.build( appRegistry + ":$BUILD_NUMBER", "./Docker-files/app/multistage/")
              }
 
-     }
+        }
     
     }
 
@@ -80,10 +80,10 @@ pipeline {
               docker.withRegistry( vprofileRegistry, registryCredential ) {
                 dockerImage.push("$BUILD_NUMBER")
                 dockerImage.push('latest')
-              }
+                }
             }
-          }
-     }
+        }
+    }
 
   }
 }

@@ -85,5 +85,12 @@ pipeline {
         }
     }
 
+    stage('Deploy to ECS') {
+        steps {
+            withAWS() {
+
+            }
+        }
+    }
   }
 }
